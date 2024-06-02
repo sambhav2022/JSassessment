@@ -1,0 +1,50 @@
+// create a variable to hold your NFT's
+const NFT_s = [];
+
+// this function will take in some values as parameters, create an
+
+function mintNFT (name ,id, age, sex, city, course_optd) {
+
+  // NFT object using the parameters passed to it for its metadata,
+  // and store it in the variable NFT_s
+  const NFT ={
+    "name" : name,
+    "id" : id,
+    "age" : age,
+    "sex" : sex,
+    "city" : city,
+    "courseopted" : course_optd
+  }
+  NFT_s.push(NFT);
+  console.log("Done : "+name);
+}
+
+// create a "loop" that will go through an "array" of NFT's
+// and print their metadata with console.log()
+function listNFTs () {
+  
+  for (var i =0;i<NFT_s.length;i++){
+    console.log("\n\nEnteries of "+NFT_s[i].name+"\n\n");
+    console.log("Name         : "+NFT_s[i].name);
+    console.log("Age          : "+NFT_s[i].age);
+    console.log("Sex          : "+NFT_s[i].sex);
+    console.log("City         : "+NFT_s[i].city);
+    console.log("Course opted : "+NFT_s[i].courseopted);
+
+  }
+}
+
+// print the total number of NFTs we have minted to the console
+function getTotalSupply(N) {
+  console.log("\n\nlength of array is : " + N.length)
+
+}
+
+// call your functions below this line
+
+mintNFT("Sambhav",1001,20,'M','Ludhiana','CSE');
+mintNFT("Ayushi",1034,19,'F','Ambala',"CSE");
+mintNFT("Ravinder",1003,21,'M','patiala',"CSE");
+mintNFT("Dravita",2004,20,'f','Jalandher',"CSE");
+listNFTs();
+getTotalSupply(NFT_s);
